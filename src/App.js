@@ -5,12 +5,13 @@ import HomePage from "./Pages/HomePage";
 import HomePageLoggedin from "./Pages/HomePageLoggedin";
 import Subscription from "./Pages/Subscription";
 import Navbar from "./components/navbar";
+import NavbarLoggedin from "./components/navbarlogin";
 import LoginPage from "./Pages/login";
 function App() {
   return (
     <>
       <div>
-        <Navbar />
+        {window.location.href === "http://localhost:3000/loggedin" ? <NavbarLoggedin /> : <Navbar />}
       </div>
       <Router>
         <Routes>
